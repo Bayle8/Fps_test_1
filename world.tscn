@@ -1,0 +1,199 @@
+[gd_scene format=3 uid="uid://4vyjf2x8xn36"]
+
+[ext_resource type="Script" uid="uid://vxs5i3dnflyn" path="res://player.gd" id="1_f3sb7"]
+[ext_resource type="Shader" uid="uid://dr85tatn8el36" path="res://toon.gdshader" id="2_fj7yv"]
+[ext_resource type="Shader" uid="uid://bnopfu1pr0vc8" path="res://outline.gdshader" id="3_tlwt5"]
+[ext_resource type="Shader" uid="uid://bxrapjnymchgm" path="res://3d_pixelart.gdshader" id="4_aqk2v"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_fj7yv"]
+sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+
+[sub_resource type="Sky" id="Sky_tlwt5"]
+sky_material = SubResource("ProceduralSkyMaterial_fj7yv")
+
+[sub_resource type="Environment" id="Environment_aqk2v"]
+background_mode = 2
+sky = SubResource("Sky_tlwt5")
+glow_enabled = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_036b0"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_g4v7s"]
+material = SubResource("StandardMaterial3D_036b0")
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_036b0"]
+points = PackedVector3Array(-0.12520654, -0.532801, -0.4805069, 0.022783129, 0.4760704, 0.49888408, 0.16971254, 0.5591441, 0.46417162, 0.23105091, -0.8035912, 0.32045516, 0.40741014, 0.651043, -0.24352328, -0.4827893, 0.59484255, 0.082213186, -0.3628679, -0.68231165, 0.2896967, 0.46904355, -0.65452886, -0.06627126, -0.12744367, 0.8427015, -0.33810276, -0.39343542, -0.6839421, -0.24471663, 0.43825462, 0.62330925, 0.20084947, 0.0841477, 0.977454, 0.11479468, -0.06820232, -0.9764576, -0.12927033, 0.20054972, -0.56312895, -0.4514544, -0.18552664, 0.59545326, -0.4534751, -0.27336287, 0.59226835, 0.40775412, -0.0069364863, -0.47682306, 0.49966025, 0.37582088, -0.5886136, 0.31695515, 0.111579016, 0.5630594, -0.48117727, -0.41725034, 0.5278656, -0.27049688, -0.48454633, -0.59697217, -0.06650971, -0.27974695, 0.90856135, 0.05333608, -0.25019687, -0.8807117, 0.20531891, 0.263647, -0.90277094, -0.1273943, 0.29336792, 0.8715263, -0.15719566, 0.3734115, -0.5263189, -0.32824618, 0.4996626, 0.47664148, -0.0068885577, 0.053105574, 0.8750009, 0.32470253, -0.15454252, -0.5908538, 0.4658794, -0.09727988, -0.7823577, -0.39818847, -0.3876489, -0.49817133, 0.31564978, -0.30067965, -0.58799505, -0.38890144)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_tlwt5"]
+render_priority = 0
+shader = ExtResource("2_fj7yv")
+shader_parameter/albedo = Color(1, 1, 1, 1)
+shader_parameter/clamp_diffuse_to_max = false
+shader_parameter/cuts = 3
+shader_parameter/wrap = 0.0
+shader_parameter/steepness = 1.0
+shader_parameter/use_attenuation = true
+shader_parameter/use_specular = true
+shader_parameter/specular_strength = 1.0
+shader_parameter/specular_shininess = 16.0
+shader_parameter/use_rim = true
+shader_parameter/rim_width = 8.0
+shader_parameter/rim_color = Color(1, 1, 1, 1)
+shader_parameter/use_ramp = false
+shader_parameter/use_borders = false
+shader_parameter/border_width = 0.01
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_pkg7o"]
+render_priority = 0
+shader = ExtResource("3_tlwt5")
+shader_parameter/shadows_enabled = true
+shader_parameter/highlights_enabled = true
+shader_parameter/shadow_strength = 0.4
+shader_parameter/highlight_strength = 0.1
+shader_parameter/highlight_color = Color(1, 1, 1, 1)
+shader_parameter/shadow_color = Color(0, 0, 0, 1)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_aqk2v"]
+render_priority = 0
+shader = ExtResource("2_fj7yv")
+shader_parameter/albedo = Color(1, 1, 1, 1)
+shader_parameter/clamp_diffuse_to_max = false
+shader_parameter/cuts = 3
+shader_parameter/wrap = 0.0
+shader_parameter/steepness = 1.0
+shader_parameter/use_attenuation = true
+shader_parameter/use_specular = true
+shader_parameter/specular_strength = 1.0
+shader_parameter/specular_shininess = 16.0
+shader_parameter/use_rim = true
+shader_parameter/rim_width = 8.0
+shader_parameter/rim_color = Color(1, 1, 1, 1)
+shader_parameter/use_ramp = false
+shader_parameter/use_borders = false
+shader_parameter/border_width = 0.01
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_036b0"]
+render_priority = 0
+shader = ExtResource("3_tlwt5")
+shader_parameter/shadows_enabled = true
+shader_parameter/highlights_enabled = true
+shader_parameter/shadow_strength = 0.4
+shader_parameter/highlight_strength = 0.1
+shader_parameter/highlight_color = Color(1, 1, 1, 1)
+shader_parameter/shadow_color = Color(0, 0, 0, 1)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_dwbse"]
+render_priority = 0
+shader = ExtResource("2_fj7yv")
+shader_parameter/albedo = Color(1, 1, 1, 1)
+shader_parameter/clamp_diffuse_to_max = false
+shader_parameter/cuts = 3
+shader_parameter/wrap = 0.0
+shader_parameter/steepness = 1.0
+shader_parameter/use_attenuation = true
+shader_parameter/use_specular = true
+shader_parameter/specular_strength = 1.0
+shader_parameter/specular_shininess = 16.0
+shader_parameter/use_rim = true
+shader_parameter/rim_width = 8.0
+shader_parameter/rim_color = Color(1, 1, 1, 1)
+shader_parameter/use_ramp = false
+shader_parameter/use_borders = false
+shader_parameter/border_width = 0.01
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_gbfbk"]
+render_priority = 0
+shader = ExtResource("3_tlwt5")
+shader_parameter/shadows_enabled = true
+shader_parameter/highlights_enabled = true
+shader_parameter/shadow_strength = 0.4
+shader_parameter/highlight_strength = 0.1
+shader_parameter/highlight_color = Color(1, 1, 1, 1)
+shader_parameter/shadow_color = Color(0, 0, 0, 1)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_yf5fn"]
+shader = ExtResource("4_aqk2v")
+
+[sub_resource type="QuadMesh" id="QuadMesh_g4v7s"]
+size = Vector2(1920, 1080)
+center_offset = Vector3(960, 540, 0)
+
+[node name="World" type="Node3D" unique_id=1352811448]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1735338172]
+transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
+shadow_enabled = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=183492222]
+environment = SubResource("Environment_aqk2v")
+
+[node name="CSGBox3D" type="CSGBox3D" parent="." unique_id=1506850525]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.0695953, 0, -5.9362917)
+use_collision = true
+size = Vector3(38, 0.1, 52)
+
+[node name="CharacterBody3D" type="CharacterBody3D" parent="." unique_id=433270218]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.1127983, 0)
+script = ExtResource("1_f3sb7")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="CharacterBody3D" unique_id=689498455]
+mesh = SubResource("CapsuleMesh_g4v7s")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D" unique_id=1415185828]
+shape = SubResource("ConvexPolygonShape3D_036b0")
+
+[node name="Head" type="Node3D" parent="CharacterBody3D" unique_id=2082822332]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6779449, 0)
+
+[node name="Camera3D" type="Camera3D" parent="CharacterBody3D/Head" unique_id=887136178]
+
+[node name="Walls" type="Node" parent="." unique_id=1403666150]
+
+[node name="Wall1" type="CSGBox3D" parent="Walls" unique_id=1759126019]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.161734, 1.2354743, -6.0369473)
+use_collision = true
+size = Vector3(1, 2.4042969, 52)
+
+[node name="Wall2" type="CSGBox3D" parent="Walls" unique_id=55069552]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.838266, 1.2354743, -6.0369473)
+use_collision = true
+size = Vector3(1, 2.4042969, 52)
+
+[node name="Wall3" type="CSGBox3D" parent="Walls" unique_id=1043651510]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -4.2426853, 1.2354743, -31.63253)
+use_collision = true
+size = Vector3(1, 2.4042969, 38)
+
+[node name="Wall4" type="CSGBox3D" parent="Walls" unique_id=2092656965]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -4.9338474, 1.2354746, 20.36747)
+use_collision = true
+size = Vector3(1, 2.4042969, 39)
+
+[node name="Cubes" type="Node" parent="." unique_id=1602038750]
+
+[node name="CSGBox3D" type="CSGBox3D" parent="Cubes" unique_id=1217024522]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.9989998, 0.5, -6.5)
+material_override = SubResource("ShaderMaterial_tlwt5")
+material_overlay = SubResource("ShaderMaterial_pkg7o")
+use_collision = true
+size = Vector3(5, 2, 6)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="Cubes" unique_id=58240441]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.999, 1.5, -15)
+material_override = SubResource("ShaderMaterial_aqk2v")
+material_overlay = SubResource("ShaderMaterial_036b0")
+use_collision = true
+size = Vector3(5, 4, 6)
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="Cubes" unique_id=353389375]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 1.5, -15)
+material_override = SubResource("ShaderMaterial_dwbse")
+material_overlay = SubResource("ShaderMaterial_gbfbk")
+use_collision = true
+size = Vector3(5, 7.5, 6)
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="." unique_id=562251452]
+texture_filter = 1
+material = SubResource("ShaderMaterial_yf5fn")
+mesh = SubResource("QuadMesh_g4v7s")
