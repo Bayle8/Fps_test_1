@@ -1,9 +1,11 @@
 [gd_scene format=3 uid="uid://4vyjf2x8xn36"]
 
+[ext_resource type="Script" uid="uid://do06dylottdhi" path="res://level_1.gd" id="1_dwbse"]
 [ext_resource type="Script" uid="uid://vxs5i3dnflyn" path="res://player.gd" id="1_f3sb7"]
 [ext_resource type="Shader" uid="uid://dr85tatn8el36" path="res://toon.gdshader" id="2_fj7yv"]
 [ext_resource type="Shader" uid="uid://bnopfu1pr0vc8" path="res://outline.gdshader" id="3_tlwt5"]
 [ext_resource type="Shader" uid="uid://bxrapjnymchgm" path="res://3d_pixelart.gdshader" id="4_aqk2v"]
+[ext_resource type="AudioStream" uid="uid://cg8ma0ck0p2ys" path="res://Grover-Washington-Jr.-feat.-Bill-Withers-Just-The-Two-of-Us-_HQ_.wav" id="5_036b0"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_fj7yv"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -120,6 +122,7 @@ size = Vector2(1920, 1080)
 center_offset = Vector3(960, 540, 0)
 
 [node name="World" type="Node3D" unique_id=1352811448]
+script = ExtResource("1_dwbse")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1735338172]
 transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
@@ -199,3 +202,7 @@ material = SubResource("ShaderMaterial_yf5fn")
 position = Vector2(-209, 0)
 scale = Vector2(1.109375, 1)
 mesh = SubResource("QuadMesh_g4v7s")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=97888922]
+stream = ExtResource("5_036b0")
+autoplay = true

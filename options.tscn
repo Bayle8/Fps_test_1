@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://curw57lo5o7d8"]
+
+[ext_resource type="Script" uid="uid://56lc7bg27dbe" path="res://options.gd" id="1_ao2gm"]
+[ext_resource type="Script" uid="uid://b8utfdytqh4l2" path="res://master music slider.gd" id="1_se8ut"]
+[ext_resource type="AudioStream" uid="uid://cg8ma0ck0p2ys" path="res://Grover-Washington-Jr.-feat.-Bill-Withers-Just-The-Two-of-Us-_HQ_.wav" id="2_ao2gm"]
+
+[node name="Options" type="Node2D" unique_id=176676200]
+script = ExtResource("1_ao2gm")
+
+[node name="HSlider" type="HSlider" parent="." unique_id=111104904]
+offset_left = 464.0
+offset_top = 222.0
+offset_right = 1026.0
+offset_bottom = 580.0
+max_value = 1.0
+step = 0.02
+script = ExtResource("1_se8ut")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1281150459]
+stream = ExtResource("2_ao2gm")
+autoplay = true
+
+[connection signal="value_changed" from="HSlider" to="HSlider" method="_on_value_changed"]
