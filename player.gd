@@ -68,6 +68,8 @@ func _physics_process(delta):
 		velocity.y = 0.0 # Cancella la gravità sul muro
 		# Calcola la direzione proiettandola lungo la parete
 		direction = direction.slide(wall_normal).normalized()
+		
+	
 	
 	if is_on_floor():
 		if direction:
